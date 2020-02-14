@@ -5,7 +5,6 @@ export const Container = styled.div`
   background: linear-gradient(-90deg, #353372, #6554c0);
   display: flex;
   justify-content: center;
-  /* align-items: center; */
 `;
 
 export const Content = styled.div`
