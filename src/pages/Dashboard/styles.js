@@ -15,10 +15,12 @@ export const Content = styled.div`
     margin-top: 30px;
     color: #fff;
     margin-bottom: 10px;
+    font-size: 42px;
   }
 
-  > p {
+  > h3 {
     color: #fff;
+    font-size: 30px;
   }
 
   div {
@@ -63,5 +65,33 @@ export const Content = styled.div`
       width: 10%;
       margin-top: 25px;
     }
+  }
+`;
+
+export const Tool = styled.li`
+  padding: 26px;
+  border-radius: 4px;
+  background: #fff;
+  margin-top: 10px;
+
+  /* opacity: ${props => (props.past ? 0.6 : 1)}; */
+
+  a {
+    display: block;
+    /* color: ${props => (props.available ? '#999' : '#7159c1')}; */
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  span {
+    display: block;
+    margin-top: 3px;
+    font-size: 20px;
+    font-weight: bold
+    /* color: ${props => (props.available ? '#999' : '#666')}; */
+  }
+  
+  > span {
+    
   }
 `;
