@@ -87,11 +87,15 @@ export const Tool = styled.li`
     display: block;
     margin-top: 3px;
     font-size: 20px;
-    font-weight: bold
+    margin-top: 5px;
     /* color: ${props => (props.available ? '#999' : '#666')}; */
   }
-  
-  > span {
-    
+
+  div {
+  }
+
+  p {
+    font-weight: bold;
+    margin-top: 10px;
   }
 `;
