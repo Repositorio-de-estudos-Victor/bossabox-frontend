@@ -83,7 +83,7 @@ export const Tool = styled.li`
     font-weight: normal;
   }
 
-  span {
+  p {
     display: block;
     margin-top: 3px;
     font-size: 20px;
@@ -92,10 +92,22 @@ export const Tool = styled.li`
   }
 
   div {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    overflow: auto;
   }
 
-  p {
+  .tags {
+    margin-top: 20px;
+    span {
+      margin-right: 10px;
+      font-size: 18px;
+      font-weight: 600;
+      }
+  }
+
+  span {
     font-weight: bold;
-    margin-top: 10px;
   }
 `;

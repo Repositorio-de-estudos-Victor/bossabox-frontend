@@ -39,11 +39,13 @@ export default function Dashboard() {
             return (
               <Tool key={tool.id}>
                 <a href={tool.link}>{tool.title}</a>
-                <span>{tool.description}</span>
+                <p>{tool.description}</p>
                 <div>
-                  {tool.tags.map(tag => {
-                    return <p key={tag}>{`#${tag}`}</p>;
-                  })}
+                  <div className="tags">
+                    {tool.tags.map(tag => {
+                      return <span key={tag}>{`#${tag}`}</span>;
+                    })}
+                  </div>
                 </div>
               </Tool>
             );
