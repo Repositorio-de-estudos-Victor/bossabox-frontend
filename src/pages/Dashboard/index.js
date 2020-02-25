@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Content, Tool } from './styles';
-import Close from '~/assets/close.png';
+import { Container, Content, Cards } from './styles';
+import Tool from '~/components/Tool';
 
 import api from '~/services/api';
 
@@ -26,7 +26,7 @@ export default function Dashboard() {
       <Content>
         <h1>VUTTR</h1>
         <h3>Very Useful Tools to Remember</h3>
-        <div>
+        <div className="header">
           <form>
             <input type="search" placeholder="search" />
             <input type="checkbox" />
@@ -35,29 +35,11 @@ export default function Dashboard() {
           <button type="button"> Add </button>
         </div>
 
-        <ul>
-          {tools.map(tool => {
-            return (
-              <Tool key={tool.id}>
-                <div className="title">
-                  <a href={tool.link}>{tool.title}</a>
-                  <img src={Close} alt="fechar" />
-                  <button type="button" className="remove">
-                    remove
-                  </button>
-                </div>
-                <p>{tool.description}</p>
-                <div>
-                  <div className="tags">
-                    {tool.tags.map(tag => {
-                      return <span key={tag}>{`#${tag}`}</span>;
-                    })}
-                  </div>
-                </div>
-              </Tool>
-            );
-          })}
-        </ul>
+        <Cards>
+          {tools.map(tool => (
+            <Tool key={tool.id} data={tool} />
+          ))}
+        </Cards>
       </Content>
     </Container>
   );

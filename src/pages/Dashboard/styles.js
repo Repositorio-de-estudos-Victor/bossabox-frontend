@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   height: 100%;
+  overflow: auto;
   background: linear-gradient(-90deg, #353372, #6554c0);
   display: flex;
   justify-content: center;
@@ -23,7 +24,7 @@ export const Content = styled.div`
     font-size: 30px;
   }
 
-  div {
+  .header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -73,6 +74,7 @@ export const Tool = styled.li`
   border-radius: 4px;
   background: #fff;
   margin-top: 10px;
+  margin-bottom: 10px;
 
   /* opacity: ${props => (props.past ? 0.6 : 1)}; */
 
@@ -125,4 +127,11 @@ export const Tool = styled.li`
   span {
     font-weight: bold;
   }
+`;
+
+export const Cards = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 30px;
+  margin-top: 40px;
 `;
