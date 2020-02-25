@@ -76,6 +76,22 @@ export const Tool = styled.li`
 
   /* opacity: ${props => (props.past ? 0.6 : 1)}; */
 
+  img {
+    width: 12px;
+    height: 12px;
+  }
+
+  .title {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .remove{
+    background: none;
+    color: #000;
+    margin-top: 0px;
+  }
+
   a {
     display: block;
     /* color: ${props => (props.available ? '#999' : '#7159c1')}; */
@@ -87,7 +103,7 @@ export const Tool = styled.li`
     display: block;
     margin-top: 3px;
     font-size: 20px;
-    margin-top: 5px;
+    margin-top: 10px;
     /* color: ${props => (props.available ? '#999' : '#666')}; */
   }
 
@@ -95,7 +111,6 @@ export const Tool = styled.li`
     display: flex;
     flex-direction: row;
     position: relative;
-    overflow: auto;
   }
 
   .tags {

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Content, Tool } from './styles';
+import Close from '~/assets/close.png';
 
 import api from '~/services/api';
 
@@ -38,7 +39,13 @@ export default function Dashboard() {
           {tools.map(tool => {
             return (
               <Tool key={tool.id}>
-                <a href={tool.link}>{tool.title}</a>
+                <div className="title">
+                  <a href={tool.link}>{tool.title}</a>
+                  <img src={Close} alt="fechar" />
+                  <button type="button" className="remove">
+                    remove
+                  </button>
+                </div>
                 <p>{tool.description}</p>
                 <div>
                   <div className="tags">
