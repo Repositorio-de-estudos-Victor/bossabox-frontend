@@ -13,8 +13,6 @@ export default function Dashboard() {
 
       const { data } = response;
 
-      console.tron.log(data);
-
       setTools(data);
     }
 
